@@ -1,3 +1,13 @@
+  git config --global user.name "superGG1990"
+
+$ git config --global user.email "superGG1990@163.com"
+
+初次使用git的用户要使用git协议大概需要三个步骤：
+一、生成密钥对
+二、设置远程仓库（本文以github为例）上的公钥
+三、把git的 remote url 修改为git协议（以上两个步骤初次设置过以后，以后使用都不需要再次设置，此步骤视以后项目的remote url而定，如果以后其他项目的协议为https则需要此步骤）
+
+ 
  一、生成密钥对
 大多数 Git 服务器都会选择使用 SSH 公钥来进行授权。系统中的每个用户都必须提供一个公钥用于授权，没有的话就要生成一个。生成公钥的过程在所有操作系统上都差不多。首先你要确认一下本机是否已经有一个公钥。
 
@@ -59,5 +69,8 @@ $ git remote -v
 origin https://github.com/someaccount/someproject.git (fetch)
 origin https://github.com/someaccount/someproject.git (push)
 
-
+修改url
+git remote set-url origin git@github.com:someaccount/someproject.git
+初始化：
+git remote add orgin {url}
 
